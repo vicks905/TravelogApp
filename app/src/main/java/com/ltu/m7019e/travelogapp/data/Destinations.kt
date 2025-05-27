@@ -1,8 +1,21 @@
-package com.ltu.m7019e.travelogapp.database
+package com.ltu.m7019e.travelogapp.data
+
+import com.ltu.m7019e.travelogapp.model.Destination
 
 class Destinations {
     fun getDestinations(): List<Destination> {
         return listOf(
+            Destination(
+                id = 2,
+                name = "Tokyo",
+                description = "Tokyo blends cutting-edge modernity with traditional temples and tranquil gardens.",
+                country = "Japan",
+                location = "35.6762,139.6503",
+                type = "City",
+                wikiUrl = "https://en.wikipedia.org/wiki/Tokyo",
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/19/Tokyo_Montage_2021.jpg",
+                videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+            ),
             Destination(
                 id = 1,
                 name = "Paris",
@@ -12,18 +25,7 @@ class Destinations {
                 location = "48.8566,2.3522",
                 wikiUrl = "https://en.wikipedia.org/wiki/Paris",
                 imageUrl = "https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg",
-                videoUrl = "https://www.youtube.com/watch?v=_xQF05x2Qeo"
-            ),
-            Destination(
-                id = 2,
-                name = "Tokyo",
-                description = "Tokyo blends cutting-edge modernity with traditional temples and tranquil gardens.",
-                country = "Japan",
-                type = "City",
-                location = "35.6762,139.6503",
-                wikiUrl = "https://en.wikipedia.org/wiki/Tokyo",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/19/Tokyo_Montage_2021.jpg",
-                videoUrl = "https://www.youtube.com/watch?v=Lj6Y6kzjkJ8"
+                videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
             ),
             Destination(
                 id = 3,
@@ -34,7 +36,7 @@ class Destinations {
                 location = "36.3932,25.4615",
                 wikiUrl = "https://en.wikipedia.org/wiki/Santorini",
                 imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/10/Santorini_sunset.jpg",
-                videoUrl = "https://www.youtube.com/watch?v=8l-ZH5jzvmI"
+                videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
             ),
             Destination(
                 id = 4,
@@ -45,7 +47,7 @@ class Destinations {
                 location = "40.7128,-74.0060",
                 wikiUrl = "https://en.wikipedia.org/wiki/New_York_City",
                 imageUrl = "https://upload.wikimedia.org/wikipedia/commons/4/4d/NYC_Midtown_Skyline.jpg",
-                videoUrl = "https://www.youtube.com/watch?v=HiXZr3D7tW4"
+                videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
             ),
             Destination(
                 id = 5,
@@ -56,7 +58,7 @@ class Destinations {
                 location = "-33.9249,18.4241",
                 wikiUrl = "https://en.wikipedia.org/wiki/Cape_Town",
                 imageUrl = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Cape_Town_Montage_2021.png",
-                videoUrl = "https://www.youtube.com/watch?v=6Lz1JqxRXxY"
+                videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
             )
         )
     }
