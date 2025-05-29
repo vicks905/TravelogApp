@@ -3,9 +3,11 @@ package com.ltu.m7019e.travelogapp.ui.screen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -19,23 +21,64 @@ import com.ltu.m7019e.travelogapp.model.Destination
 
 @Composable
 fun DestinationGridScreen(navController: NavController, destinations: List<Destination>) {
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        modifier = Modifier.fillMaxSize().padding(16.dp)
-    ) {
-        items(destinations) {destination ->
-            // Pass only destination.id to the DestinationCard
-            DestinationCard(destinationId = destination.id, navController = navController, destinations = destinations)
+    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+        Text(
+            text = "Featured Destinations",
+            style = MaterialTheme.typography.titleMedium,
+            modifier = Modifier.padding(bottom = 8.dp)
+        )
+
+        // Horizontal scroll section
+        LazyRow(
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            items(destinations.take(3)) { destination ->
+                Card(
+                    modifier = Modifier
+                        .width(200.dp)
+                        .clickable {
+                            navController.navigate("destinationDetails/${destination.id}")
+                        },
+                    shape = RoundedCornerShape(8.dp)
+                ) {
+                    Column(modifier = Modifier.padding(8.dp)) {
+                        Image(
+                            painter = rememberImagePainter(destination.imageUrl),
+                            contentDescription = destination.name,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(100.dp)
+                                .clip(RoundedCornerShape(8.dp))
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(text = destination.name, style = MaterialTheme.typography.bodyMedium)
+                    }
+                }
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Vertical grid section
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            modifier = Modifier.fillMaxSize()
+        ) {
+            items(destinations) { destination ->
+                DestinationCard(
+                    destinationId = destination.id,
+                    navController = navController,
+                    destinations = destinations
+                )
+            }
         }
     }
 }
 
 @Composable
 fun DestinationCard(destinationId: Int, destinations: List<Destination>, navController: NavController) {
-    // Find the destination object based on the destinationId
     val destination = destinations.find { it.id == destinationId }
-
-    // Ensure the destination object exists
     if (destination != null) {
         Card(
             modifier = Modifier
@@ -43,13 +86,11 @@ fun DestinationCard(destinationId: Int, destinations: List<Destination>, navCont
                 .fillMaxWidth()
                 .height(180.dp)
                 .clickable {
-                    // Navigate using the destinationId
                     navController.navigate("destinationDetails/${destination.id}")
                 },
             shape = RoundedCornerShape(8.dp),
         ) {
             Box(modifier = Modifier.fillMaxSize()) {
-                // Display the image and name of the destination
                 Image(
                     painter = rememberImagePainter(destination.imageUrl),
                     contentDescription = destination.name,
@@ -63,4 +104,3 @@ fun DestinationCard(destinationId: Int, destinations: List<Destination>, navCont
         }
     }
 }
-
