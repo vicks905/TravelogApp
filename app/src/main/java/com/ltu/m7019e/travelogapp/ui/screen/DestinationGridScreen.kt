@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import coil.compose.rememberImagePainter
+import coil.compose.rememberAsyncImagePainter
 import com.ltu.m7019e.travelogapp.model.Destination
 
 @Composable
@@ -44,7 +44,7 @@ fun DestinationGridScreen(navController: NavController, destinations: List<Desti
                 ) {
                     Column(modifier = Modifier.padding(8.dp)) {
                         Image(
-                            painter = rememberImagePainter(destination.imageUrl),
+                            painter = rememberAsyncImagePainter(destination.imageUrl),
                             contentDescription = destination.name,
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -92,13 +92,13 @@ fun DestinationCard(destinationId: Int, destinations: List<Destination>, navCont
         ) {
             Box(modifier = Modifier.fillMaxSize()) {
                 Image(
-                    painter = rememberImagePainter(destination.imageUrl),
+                    painter = rememberAsyncImagePainter(destination.imageUrl),
                     contentDescription = destination.name,
                     modifier = Modifier.fillMaxSize().clip(RoundedCornerShape(8.dp))
                 )
                 Text(
                     text = destination.name,
-                    modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp)
+                    modifier = Modifier.align(Alignment.BottomCenter).padding(8.dp)
                 )
             }
         }

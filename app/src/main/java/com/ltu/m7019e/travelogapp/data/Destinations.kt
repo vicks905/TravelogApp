@@ -13,7 +13,7 @@ class Destinations {
                 location = "35.6762,139.6503",
                 type = "City",
                 wikiUrl = "https://en.wikipedia.org/wiki/Tokyo",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/19/Tokyo_Montage_2021.jpg",
+                imageUrl = "https://plus.unsplash.com/premium_photo-1661914240950-b0124f20a5c1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9reW98ZW58MHx8MHx8fDA%3D",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
             ),
             Destination(
@@ -35,7 +35,7 @@ class Destinations {
                 type = "Beach",
                 location = "36.3932,25.4615",
                 wikiUrl = "https://en.wikipedia.org/wiki/Santorini",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/10/Santorini_sunset.jpg",
+                imageUrl = "https://res.cloudinary.com/manawa/image/private/s--_OzFDCYE--/v1725534294/hebnsqjvxshq5t1krsku.jpg",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
             ),
             Destination(
@@ -46,7 +46,7 @@ class Destinations {
                 type = "Urban",
                 location = "40.7128,-74.0060",
                 wikiUrl = "https://en.wikipedia.org/wiki/New_York_City",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/4/4d/NYC_Midtown_Skyline.jpg",
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/0/04/Lights_of_Rockefeller_Center_during_sunset.jpg",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
             ),
             Destination(
@@ -57,7 +57,7 @@ class Destinations {
                 type = "Nature",
                 location = "-33.9249,18.4241",
                 wikiUrl = "https://en.wikipedia.org/wiki/Cape_Town",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Cape_Town_Montage_2021.png",
+                imageUrl = "https://cdn.britannica.com/42/126842-050-0803BC41/Sea-Point-Cape-Town-SAf.jpg",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
             ),
             Destination(
@@ -68,7 +68,7 @@ class Destinations {
                 location = "-22.9068,-43.1729",
                 type = "Festival",
                 wikiUrl = "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/53/Rio_de_Janeiro_2014.jpg",
+                imageUrl = "https://cdn.britannica.com/03/94403-050-03683FB0/Rio-de-Janeiro-Braz.jpg",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4"
             ),
             Destination(
@@ -79,7 +79,7 @@ class Destinations {
                 location = "41.9028,12.4964",
                 type = "Historic",
                 wikiUrl = "https://en.wikipedia.org/wiki/Rome",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/e/e7/Rome_Montage_2017.png",
+                imageUrl = "https://media.istockphoto.com/id/539115110/photo/colosseum-in-rome-and-morning-sun-italy.jpg?s=612x612&w=0&k=20&c=9NtFxHI3P2IBWRY9t0NrfPZPR4iusHmVLbXg2Cjv9Fs=",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4"
             ),
             Destination(
@@ -90,7 +90,7 @@ class Destinations {
                 location = "-45.0312,168.6626",
                 type = "Adventure",
                 wikiUrl = "https://en.wikipedia.org/wiki/Queenstown,_New_Zealand",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/e/e3/Queenstown_NZ.jpg",
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/c/c9/Queenstown_1_%288168013172%29.jpg",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
             ),
             Destination(
@@ -101,7 +101,7 @@ class Destinations {
                 location = "25.276987,55.296249",
                 type = "Luxury",
                 wikiUrl = "https://en.wikipedia.org/wiki/Dubai",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/0/0c/Dubai_Skyline.jpg",
+                imageUrl = "https://cdn.britannica.com/15/189715-050-4310222B/Dubai-United-Arab-Emirates-Burj-Khalifa-top.jpg",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
             ),
             Destination(
@@ -112,7 +112,7 @@ class Destinations {
                 location = "51.1784,-115.5708",
                 type = "Nature",
                 wikiUrl = "https://en.wikipedia.org/wiki/Banff,_Alberta",
-                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/1d/Banff_National_Park.jpg",
+                imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Moraine_Lake_17092005.jpg/960px-Moraine_Lake_17092005.jpg",
                 videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"
             )
 

@@ -15,9 +15,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.ltu.m7019e.travelogapp.model.Destination
+import com.ltu.m7019e.travelogapp.viewmodel.DestinationViewModel
+import androidx.compose.runtime.livedata.observeAsState
+import java.net.URLEncoder
+import java.nio.charset.StandardCharsets
+
 
 @Composable
-fun DestinationDetailsScreen(navController: NavController, destination: Destination) {
+fun DestinationDetailsScreen(
+    navController: NavController,
+    destination: Destination,
+    viewModel: DestinationViewModel) {
+
+    val videoUrl = viewModel.getDestinationVideo(destination.name).observeAsState()
+
     val context = LocalContext.current
 
     Column(
@@ -49,11 +60,17 @@ fun DestinationDetailsScreen(navController: NavController, destination: Destinat
 
         Spacer(modifier = Modifier.height(16.dp))
 
-
-        Button(onClick = {
-            navController.navigate("destinationMedia/${destination.id}")
-        }) {
-            Text("View Media")
+        if (videoUrl.value != null && videoUrl.value != "No video found") {
+            val encodedVideoUrl = URLEncoder.encode(videoUrl.value, StandardCharsets.UTF_8.toString())
+            Button(onClick = {
+                navController.navigate("destinationMedia/${destination.id}/$encodedVideoUrl")
+            }) {
+                Text("Play Video")
+            }
+        } else {
+            Text(text = "No video available for this destination.")
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }

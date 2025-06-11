@@ -72,4 +72,16 @@ dependencies {
     // ExoPlayer (Media3)
     implementation(libs.media3)
     implementation(libs.media3.ui)
+
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+
+    // LiveData for observing data
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.9.1")
+    implementation("androidx.compose.runtime:runtime-livedata:1.8.2")
+
+    //implementation("com.google.android.youtube:youtube-android-player-api:1.2.2")
+//    implementation(libs.core)
+    implementation("androidx.webkit:webkit:1.5.0")
+
 }
